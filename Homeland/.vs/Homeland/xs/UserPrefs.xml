@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{06081BEF-2747-DECD-4B3B-318062A2F2FF}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Waypoints.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Waypoints.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/EnemyMovement.cs" Line="10" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0630776e-4070-4bdd-926b-751199d108d2" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jerry/Desktop/UnityGame/Homeland/Homeland/Assets/Scripts/Waypoints.cs" relfile="Assets/Scripts/Waypoints.cs" line="9" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
