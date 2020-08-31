@@ -7,7 +7,7 @@ public class Waypoints : MonoBehaviour
     // Array of the positions of the waypoints
     public static Transform[] waypoints;
 
-    // Instantiate waypoints 
+    // Initialize the waypoints 
     public void Awake()
     {
         waypoints = new Transform[this.transform.childCount];

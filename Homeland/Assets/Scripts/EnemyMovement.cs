@@ -25,6 +25,10 @@ public class EnemyMovement : MonoBehaviour
         }           
     }
 
+    /// <summary>
+    /// Set the next waypoint as target such that the enemy can move towards it.
+    /// If enemy reaches the last waypoint, destroy the enemy game object.
+    /// </summary>
     private void findNextWaypoint()
     {
         if (waypointIndex >= Waypoints.waypoints.Length - 1)
@@ -32,7 +36,6 @@ public class EnemyMovement : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         waypointIndex++;
         target = Waypoints.waypoints[waypointIndex];
     }
