@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// Responsible for keeping track of if the player can build on the node, handle user's input,
@@ -30,6 +31,13 @@ public class Node : MonoBehaviour
     /// </summary>
     private void OnMouseDown()
     {
+        // Ensure that the turret doesn't build on the node under the turret buttons
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (BuildManager.instance.GetTurretType() == null)
+            return;
+
         if (!isAvailable)
         {
             Debug.Log("This node is not available!");
@@ -38,10 +46,18 @@ public class Node : MonoBehaviour
         GameObject turretToBuild = BuildManager.instance.GetTurretType();
         turret = Instantiate(turretToBuild, this.transform.position + positionOffset, this.transform.rotation);
         turret.transform.SetParent(parent);
+        isAvailable = false;
     }
 
     private void OnMouseEnter()
     {
+        // The color of the node under the turret buttons will not be changed
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (BuildManager.instance.GetTurretType() == null)
+            return;
+
         rend.material.color = hoverColor;
     }
 

@@ -4,18 +4,30 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    /// <summary>
+    /// Set the type of the turret to build to standard turret.
+    /// </summary>
     public void PurchaseStandardTurret()
     {
-        Debug.Log("Standard Turret Purchased");
+        Debug.Log("Standard turret selected");
+        BuildManager.instance.SetTurretToBuild(BuildManager.instance.StandardTurretPrefab);
     }
 
-    public void PurchaseTurret2()
+    /// <summary>
+    /// Set the type of the turret to build to turret 2.
+    /// </summary>
+    public void PurchaseLongRangeTurret()
     {
-        Debug.Log("Turret 2 purchased");
+        Debug.Log("Long range turret selected");
+        BuildManager.instance.SetTurretToBuild(BuildManager.instance.LongRangeTurretPrefab);
     }
 
-    public void PurchaseTurret3()
+    /// <summary>
+    /// Set the type of the turret to build to turret 3.
+    /// </summary>
+    public void PurchaseMissileLauncher()
     {
-        Debug.Log("Turret 3 purchased");
+        Debug.Log("Missile launcher selected");
+        BuildManager.instance.SetTurretToBuild(BuildManager.instance.MissileLauncherPrefab);
     }
 }

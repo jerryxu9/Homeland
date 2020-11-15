@@ -8,7 +8,10 @@ using UnityEngine;
 /// </summary>
 public class BuildManager : MonoBehaviour
 {
-    public GameObject standardTurretPrefab;
+    public GameObject StandardTurretPrefab;
+    public GameObject LongRangeTurretPrefab;
+    public GameObject MissileLauncherPrefab;
+
     private GameObject turretToBuild;
 
     // Singleton pattern: we only need 1 BuildManager for the entire game
@@ -21,11 +24,6 @@ public class BuildManager : MonoBehaviour
 
         instance = this;
     }
-
-    private void Start()
-    {
-        turretToBuild = standardTurretPrefab;
-    }
     
     /// <summary>
     /// Return the type of the turret to build to the caller
@@ -34,5 +32,14 @@ public class BuildManager : MonoBehaviour
     public GameObject GetTurretType()
     {
         return turretToBuild;
+    }
+
+    /// <summary>
+    /// Set the type of the turret to build
+    /// </summary>
+    /// <param name="turret">GameObject of turret to build</param>
+    public void SetTurretToBuild(GameObject turret)
+    {
+        turretToBuild = turret;
     }
 }
